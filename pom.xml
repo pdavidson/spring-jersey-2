@@ -35,6 +35,11 @@
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.7.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.netflix.rxjava</groupId>
+            <artifactId>rxjava-core</artifactId>
+            <version>0.20.4</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -51,6 +56,8 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
                 <configuration>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
                     <webApp>
                         <contextPath>/test</contextPath>
                     </webApp>
